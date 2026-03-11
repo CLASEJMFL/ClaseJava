@@ -7,6 +7,7 @@ public class App {
 
         p1.mostrarEstado();
         p2.mostrarEstado();
+        
         int i = 1;
         while (true) {
 

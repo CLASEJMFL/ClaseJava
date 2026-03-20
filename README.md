@@ -1,1 +1,1 @@
-Estas son los temarios con las actividades que voy haciendo de java. ¯\_(ツ)_/¯ 
+Estas son los temarios con las actividades que voy haciendo de java. (¯\_(ツ)_/¯) 

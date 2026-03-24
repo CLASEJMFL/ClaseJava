@@ -11,9 +11,7 @@ public class App {
         String nombreTitular = sc.nextLine();
 
         // Agregamos al usuario
-        Gestores g1 = new Gestores("Antonio", 123456789);
-        g1.mostrarInfoGestor();
-        CuentaCorriente p1 = new CuentaCorriente(DNI, nombreTitular, 0,g1.sacarNombreGestor());
+        CuentaCorriente p1 = new CuentaCorriente(DNI, nombreTitular, 0);
         // Monstramos al usuario
         p1.mostrarInfo();
 
@@ -29,23 +27,22 @@ public class App {
             if (opcion == 1) {
                 System.out.println("Cuanto dinero quiere sacar");
                 int sacar = sc.nextInt();
-                if (sacar > p1.saldo) {
-                    System.out.println("Usted a sacado: "+p1.saldo);
-                    p1.saldo = 0;
-                    System.out.println("Le quedan: v"+p1.saldo+" en su cuenta");
+                if (sacar > p1.getSaldo()) {
+                    System.out.println("Usted a sacado: "+p1.getSaldo());
+                    p1.setSaldo() = 0;
+                    System.out.println("Le quedan: v"+p1.getSaldo()+" en su cuenta");
 
                 } else {
-                    p1.saldo = p1.saldo -sacar;
+                    p1.getSaldo() = p1.getSaldo() -sacar;
                     System.out.println("Usted a sacado: "+sacar);
-                    System.out.println("Le quedan: "+p1.saldo+"€ en su cuenta");
+                    System.out.println("Le quedan: "+p1.getSaldo()+"€ en su cuenta");
                 }
             } else if (opcion == 2) {
                 System.out.println("Cuanto dinero quiere guardar");
                 int guardar = sc.nextInt();
-                p1.saldo = p1.saldo + guardar;
+                p1.getSaldo() = p1.getSaldo() + guardar;
             } else if (opcion == 3) {
                 p1.mostrarInfo();
-                g1.mostrarInfoGestor();
             } else if (opcion == 4) {
                 break;
             } else {

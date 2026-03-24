@@ -1,14 +1,20 @@
 public class CuentaCorriente {
-    private String DNI;
-    private String nombreTitular;
-    int saldo;
-    private String gestor;
+    String DNI;
+    public String nombreTitular;
+    private int saldo;
 
-    public CuentaCorriente(String dNI, String nombreTitular, int saldo,String gestor) {
-        DNI = dNI;
-        this.nombreTitular = nombreTitular;
+    public int getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(int saldo) {
         this.saldo = saldo;
-        this.gestor = gestor;
+    }
+
+    public CuentaCorriente(String dNI, String nombreTitular, int saldo) {
+        this.DNI = dNI;
+        this.nombreTitular = nombreTitular;
+        setSaldo(saldo);
     }
     
     void mostrarInfo() {
@@ -16,7 +22,6 @@ public class CuentaCorriente {
         System.out.println("La cuenta con el nombre: "+nombreTitular);
         System.out.println("Con el DNI: "+DNI);
         System.out.println("Su saldo actual es: "+saldo);
-        System.out.println("Su gestor es: "+gestor);
         System.out.println("==========================");
     }
 }

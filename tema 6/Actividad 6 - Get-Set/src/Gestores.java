@@ -1,7 +1,7 @@
 public class Gestores {
-    String nombre;
-    int telefono;
-    int importeMaximo=10000;
+    public String nombre;
+    final int telefono;
+    private int importeMaximo;
 
     public Gestores(String nombre, int telefono, int importeMaximo) {
         this.nombre = nombre;
